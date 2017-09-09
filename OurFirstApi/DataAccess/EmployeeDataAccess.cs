@@ -9,36 +9,6 @@ using OurFirstApi.Models;
 
 namespace OurFirstApi.DataAccess
 {
-    public class IntRepository : IRepository<int>
-    {
-        public List<int> GetAll()
-        {
-            throw new NotImplementedException();
-        }
-
-        public int Get(int id)
-        {
-            throw new NotImplementedException();
-        }
-    }
-
-    public class FakeEmployeeDataAccess : IRepository<EmployeeListResult>
-    {
-        public List<EmployeeListResult> GetAll()
-        {
-            throw new NotImplementedException();
-        }
-
-        public EmployeeListResult Get(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public string Stuff()
-        {
-            return "stuff";
-        }
-    }
 
     public class EmployeeDataAccess : IRepository<EmployeeListResult>
     {
@@ -72,5 +42,7 @@ namespace OurFirstApi.DataAccess
     {
         List<T> GetAll();
         T Get(int id);
+        void Delete(int id);
+        void Update(T entityToUpdate);
     }
 }
