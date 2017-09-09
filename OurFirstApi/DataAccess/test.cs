@@ -2,9 +2,9 @@
 
 namespace OurFirstApi.DataAccess
 {
-    public class Test2
+    public class Test
     {
-        public Test2()
+        public Test()
         {
             Console.WriteLine("Doing things");
         }
