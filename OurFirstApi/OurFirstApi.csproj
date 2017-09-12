@@ -182,12 +182,14 @@
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\EmployeesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\ValuesController.cs" />
     <Compile Include="DataAccess\EmployeeDataAccess.cs" />
     <Compile Include="DataAccess\test.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\CreateOrderModel.cs" />
     <Compile Include="Models\EmployeeListResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

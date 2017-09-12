@@ -16,6 +16,14 @@ namespace OurFirstApi.Controllers
     [RoutePrefix("api/employee")]
     public class EmployeesController : ApiController
     {
+        [HttpPost,Route("")]
+        public HttpResponseMessage AddEmployee(EmployeeListResult employeeToAdd)
+        {
+            var employeeData = new EmployeeDataAccess();
+            var id = employeeData.Insert(employeeToAdd);
+            return Request.CreateResponse(HttpStatusCode.Created, new { Id = id, Message = $"EmployeeId {id} was created"});
+        }
+
         //api/employees
         public HttpResponseMessage Get()
         {
@@ -38,7 +46,7 @@ namespace OurFirstApi.Controllers
         {
             try
             {
-                var repo = new FakeEmployeeDataAccess();
+                var repo = new EmployeeDataAccess();
                 var result = repo.Get(id);
 
                 if (result == null)
